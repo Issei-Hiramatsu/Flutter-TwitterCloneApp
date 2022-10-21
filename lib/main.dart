@@ -1,17 +1,16 @@
 import 'package:flutter/material.dart';
-
-import 'screen/home_screen.dart';
+import 'package:twitterclone_app/widgets/app_drawer.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(MyHomePage());
 }
 
-class MyApp extends StatelessWidget {
+class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      home: TwitterHomeScreen(),
+      home: AppDrawer(),
     );
   }
 }

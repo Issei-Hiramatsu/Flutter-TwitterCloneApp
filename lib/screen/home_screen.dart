@@ -44,66 +44,67 @@ class TwitterHomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.white, //statusbarと色が被っているため
-        body: SafeArea(
-          bottom: false,
-          child: CustomScrollView(
-            slivers: [
-              TwitterAppBar(),
-              SliverList(
-                delegate: SliverChildBuilderDelegate(
-                  (context, index) => Column(
-                    children: <Widget>[
-                      Row(
-                        children: [
-                          Container(
-                            child: Text('ここにしゃしん'),
-                          ),
-                          Expanded(
-                              child: Column(
-                            children: [
-                              Row(children: [
-                                Text(names[index]),
-                                Text('@' + (names[index])),
-                              ]),
-                              Container(
-                                  alignment: Alignment.topLeft,
-                                  child: Text(
-                                    'ここにツイートだよ',
-                                  )),
-                              Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    IconButton(
-                                      onPressed: () {},
-                                      icon: Icon(Icons.chat_bubble_outline),
-                                    ),
-                                    IconButton(
-                                      onPressed: () {},
-                                      icon: Icon(Icons.favorite_border),
-                                    ),
-                                    IconButton(
-                                      onPressed: () {},
-                                      icon: Icon(Icons.autorenew),
-                                    ),
-                                    IconButton(
-                                      onPressed: () {},
-                                      icon: Icon(Icons.upgrade_outlined),
-                                    ),
-                                  ]),
-                            ],
-                          )),
-                        ],
-                      )
-                    ],
-                  ),
-                  childCount: names.length,
+      backgroundColor: Colors.white, //statusbarと色が被っているため
+      body: SafeArea(
+        bottom: false,
+        child: CustomScrollView(
+          slivers: [
+            TwitterAppBar(),
+            SliverList(
+              delegate: SliverChildBuilderDelegate(
+                (context, index) => Column(
+                  children: <Widget>[
+                    Row(
+                      children: [
+                        Container(
+                          child: Text('ここにしゃしん'),
+                        ),
+                        Expanded(
+                            child: Column(
+                          children: [
+                            Row(children: [
+                              Text(names[index]),
+                              Text('@' + (names[index])),
+                            ]),
+                            Container(
+                                alignment: Alignment.topLeft,
+                                child: Text(
+                                  'ここにツイートだよ',
+                                )),
+                            Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  IconButton(
+                                    onPressed: () {},
+                                    icon: Icon(Icons.chat_bubble_outline),
+                                  ),
+                                  IconButton(
+                                    onPressed: () {},
+                                    icon: Icon(Icons.favorite_border),
+                                  ),
+                                  IconButton(
+                                    onPressed: () {},
+                                    icon: Icon(Icons.autorenew),
+                                  ),
+                                  IconButton(
+                                    onPressed: () {},
+                                    icon: Icon(Icons.upgrade_outlined),
+                                  ),
+                                ]),
+                          ],
+                        )),
+                      ],
+                    )
+                  ],
                 ),
-              )
-            ],
-          ),
+                childCount: names.length,
+              ),
+            )
+          ],
         ),
-        bottomNavigationBar: TwitterBottomNavigationBar());
+      ),
+      bottomNavigationBar: TwitterBottomNavigationBar(),
+    );
   }
 }
