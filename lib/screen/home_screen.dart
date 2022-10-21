@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../widget/app_bar.dart';
-import '../widget/bottom_navigation_bar.dart';
+import '../widgets/app_bar.dart';
+import '../widgets/bottom_navigation_bar.dart';
 
 class TwitterHomeScreen extends StatelessWidget {
   final profileimages = [

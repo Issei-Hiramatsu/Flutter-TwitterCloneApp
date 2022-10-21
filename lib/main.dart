@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:twitterclone_app/screen/home_screen.dart';
 import 'package:twitterclone_app/widgets/app_drawer.dart';
 
 void main() {
@@ -10,7 +11,7 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      home: AppDrawer(),
+      home: TwitterHomeScreen(),
     );
   }
 }
