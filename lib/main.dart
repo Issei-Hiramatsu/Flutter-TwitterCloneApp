@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:twitterclone_app/developing/tmp.dart';
 
 void main() {
   runApp(MyApp());
@@ -10,7 +9,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      home: tmpMyTabbedPage(),
+      home: TwitterBodyPage(),
     );
   }
 }
